@@ -115,7 +115,6 @@ function HistoryContent() {
                 <div className="mt-2 bg-black/20 rounded-2xl p-5 border-l-2 border-blue-500/50 space-y-2">
                   {log.setsList.map((s, idx) => (
                     <div key={idx} className="text-gray-200 font-sans tracking-wide text-lg">
-                      <span className="text-gray-500 mr-2">{idx + 1}.</span>
                       <span className="font-bold">{s.reps}x</span>
                       {s.negatives && <span className="text-gray-400 italic"> + {s.negatives}x negative</span>}
                     </div>

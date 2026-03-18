@@ -126,22 +126,24 @@ export default function ExerciseCard({ exercise, onSaveProgress, onViewHistory }
             Add Set
           </label>
           <div className="flex gap-2">
-            <input
-              type="number"
-              min="1"
-              value={reps}
-              onChange={(e) => setReps(e.target.value)}
-              className="w-[100px] bg-black/50 border border-white/10 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500/50 focus:bg-black/70 focus:border-transparent outline-none transition-all placeholder-gray-600 shadow-inner"
-              placeholder="Reps"
-            />
-            <input
-              type="number"
-              min="1"
-              value={negatives}
-              onChange={(e) => setNegatives(e.target.value)}
-              className="flex-1 bg-black/50 border border-white/10 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500/50 focus:bg-black/70 focus:border-transparent outline-none transition-all placeholder-gray-600 shadow-inner"
-              placeholder="+ Negatives (opt)"
-            />
+            <div className='flex flex-col xs:flex-row w-full gap-2'>
+              <input
+                type="number"
+                min="1"
+                value={reps}
+                onChange={(e) => setReps(e.target.value)}
+                className="xs:w-[100px] w-full bg-black/50 border border-white/10 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500/50 focus:bg-black/70 focus:border-transparent outline-none transition-all placeholder-gray-600 shadow-inner"
+                placeholder="Reps"
+              />
+              <input
+                type="number"
+                min="1"
+                value={negatives}
+                onChange={(e) => setNegatives(e.target.value)}
+                className="flex-1 w-full bg-black/50 border border-white/10 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500/50 focus:bg-black/70 focus:border-transparent outline-none transition-all placeholder-gray-600 shadow-inner"
+                placeholder="+ Negatives (opt)"
+              />
+            </div>
             <button
               type="submit"
               disabled={reps.trim() === ''}
